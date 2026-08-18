@@ -40,7 +40,7 @@ html, body, * {
 
 /* ---------- base ---------- */
 body {
-    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@f27fe42d2736e5a1cbd2c584c08b8be3af1bbf86/pandora_bg.webp') !important;
+    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
     background-size: cover, cover !important;
     background-position: center, center !important;
     background-repeat: no-repeat, no-repeat !important;
@@ -86,15 +86,15 @@ body {
 }
 
 .pandora-bg-toggle-label::before {
-    content: "🎬 Animated BG (click for static)";
-}
-
-#pandoraBgToggle:checked ~ .pandora-bg-toggle-label::before {
     content: "🖼️ Static BG (click for animated)";
 }
 
+#pandoraBgToggle:checked ~ .pandora-bg-toggle-label::before {
+    content: "🎬 Animated BG (click for static)";
+}
+
 body:has(#pandoraBgToggle:checked) {
-    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
+    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@f27fe42d2736e5a1cbd2c584c08b8be3af1bbf86/pandora_bg.webp') !important;
 }
 
 h1, h2, h3 {
