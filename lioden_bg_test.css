@@ -1,20 +1,20 @@
 /* ============================================================
    PANDORA — bioluminescent forest theme for Lioden
-   cyan + pink/magenta glow over a dark night-forest palette
+   violet + magenta glow, translucent panels over the bg image
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
 
 :root {
-    --pandora-bg: #060c14;
-    --pandora-panel: rgba(8, 20, 28, 0.78);
-    --pandora-panel-light: rgba(14, 30, 40, 0.7);
-    --cyan: #5eead4;
-    --cyan-bright: #7dfcff;
-    --pink: #f472e0;
-    --pink-bright: #ff8ff0;
-    --text: #dff6f5;
-    --text-dim: #9fc9c6;
+    --pandora-bg: #0d0518;
+    --pandora-panel: rgba(38, 10, 58, 0.45);
+    --pandora-panel-light: rgba(52, 14, 76, 0.35);
+    --cyan: #a855f7;
+    --cyan-bright: #d8b4fe;
+    --pink: #d946ef;
+    --pink-bright: #f0abfc;
+    --text: #f3e8ff;
+    --text-dim: #c9a8e0;
 }
 
 /* ---------- base ---------- */
@@ -28,12 +28,12 @@ body {
 h1, h2, h3 {
     font-family: 'Philosopher', serif !important;
     color: var(--pink-bright) !important;
-    text-shadow: 0 0 8px rgba(244, 114, 224, 0.6), 0 0 16px rgba(244, 114, 224, 0.25) !important;
+    text-shadow: 0 0 8px rgba(217, 70, 239, 0.6), 0 0 16px rgba(217, 70, 239, 0.25) !important;
 }
 
 .sidebar h3 {
     color: var(--cyan-bright) !important;
-    text-shadow: 0 0 8px rgba(94, 234, 212, 0.6) !important;
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.6) !important;
 }
 
 p, b, small {
@@ -42,9 +42,9 @@ p, b, small {
 
 #fraProfileContent {
     background: var(--pandora-panel) !important;
-    border: 1px solid rgba(94, 234, 212, 0.35) !important;
+    border: 1px solid rgba(168, 85, 247, 0.35) !important;
     border-radius: 10px !important;
-    box-shadow: 0 0 20px rgba(94, 234, 212, 0.15), inset 0 0 30px rgba(244, 114, 224, 0.05) !important;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15), inset 0 0 30px rgba(217, 70, 239, 0.05) !important;
     padding: 16px;
 }
 
@@ -57,14 +57,14 @@ a:link, a:visited, a:active {
 
 a:hover, a:focus {
     color: var(--pink-bright) !important;
-    text-shadow: 0 0 8px rgba(255, 143, 240, 0.8) !important;
+    text-shadow: 0 0 8px rgba(240, 171, 252, 0.8) !important;
 }
 
 /* ---------- topbar / navbar ---------- */
 .topbar, .navbar, .navbar-default {
-    background: linear-gradient(180deg, rgba(6, 12, 20, 0.95), rgba(6, 12, 20, 0.8)) !important;
-    border-bottom: 1px solid rgba(94, 234, 212, 0.4) !important;
-    box-shadow: 0 2px 12px rgba(94, 234, 212, 0.2) !important;
+    background: linear-gradient(180deg, rgba(13, 5, 24, 0.95), rgba(13, 5, 24, 0.8)) !important;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.4) !important;
+    box-shadow: 0 2px 12px rgba(168, 85, 247, 0.2) !important;
 }
 
 .topbar a:link, .topbar a:visited, .topbar a:active {
@@ -73,7 +73,7 @@ a:hover, a:focus {
 
 .topbar a:hover, .topbar a:focus {
     color: var(--pink-bright) !important;
-    text-shadow: 0 0 8px rgba(255, 143, 240, 0.7) !important;
+    text-shadow: 0 0 8px rgba(240, 171, 252, 0.7) !important;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -86,13 +86,13 @@ a:hover, a:focus {
 .navbar-default .navbar-nav li a:hover,
 .navbar-default .navbar-nav li a:focus {
     color: var(--pink-bright) !important;
-    background: rgba(244, 114, 224, 0.12) !important;
-    text-shadow: 0 0 6px rgba(255, 143, 240, 0.6) !important;
+    background: rgba(217, 70, 239, 0.12) !important;
+    text-shadow: 0 0 6px rgba(240, 171, 252, 0.6) !important;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     background: transparent !important;
-    border-color: rgba(94, 234, 212, 0.25) !important;
+    border-color: rgba(168, 85, 247, 0.25) !important;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -116,9 +116,9 @@ a:hover, a:focus {
 /* ---------- sidebar / panels ---------- */
 .sidebar.col-md-3, .col-md-3 .panel, .panel-body {
     background: var(--pandora-panel) !important;
-    border: 1px solid rgba(94, 234, 212, 0.3) !important;
+    border: 1px solid rgba(168, 85, 247, 0.3) !important;
     border-radius: 10px !important;
-    box-shadow: 0 0 16px rgba(94, 234, 212, 0.12) !important;
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.12) !important;
 }
 
 /* ---------- progress bars ---------- */
@@ -129,7 +129,7 @@ a:hover, a:focus {
 
 .progress-bar-success {
     background: linear-gradient(90deg, #2fd6a0, var(--cyan-bright)) !important;
-    box-shadow: 0 0 10px rgba(94, 234, 212, 0.6) !important;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.6) !important;
 }
 
 .progress-bar-danger {
@@ -150,14 +150,14 @@ a:hover, a:focus {
 }
 
 .alert-success {
-    background: rgba(94, 234, 212, 0.1) !important;
-    border-color: rgba(94, 234, 212, 0.5) !important;
+    background: rgba(168, 85, 247, 0.1) !important;
+    border-color: rgba(168, 85, 247, 0.5) !important;
     color: var(--cyan-bright) !important;
 }
 
 .alert-danger {
-    background: rgba(244, 114, 224, 0.12) !important;
-    border-color: rgba(244, 114, 224, 0.5) !important;
+    background: rgba(217, 70, 239, 0.12) !important;
+    border-color: rgba(217, 70, 239, 0.5) !important;
     color: var(--pink-bright) !important;
 }
 
@@ -170,12 +170,12 @@ a:hover, a:focus {
 /* ---------- comment box ---------- */
 #commentBox {
     background: var(--pandora-panel) !important;
-    border: 1px solid rgba(94, 234, 212, 0.25) !important;
+    border: 1px solid rgba(168, 85, 247, 0.25) !important;
     border-radius: 8px !important;
 }
 
 .comment:nth-child(even) {
-    background: rgba(244, 114, 224, 0.05) !important;
+    background: rgba(217, 70, 239, 0.05) !important;
 }
 
 #commentBox::-webkit-scrollbar {
@@ -199,9 +199,9 @@ a:hover, a:focus {
 }
 
 .table .top, .table th, .table .innerHeader, .table .bottom {
-    background: rgba(94, 234, 212, 0.1) !important;
+    background: rgba(168, 85, 247, 0.1) !important;
     color: var(--cyan-bright) !important;
-    border-color: rgba(94, 234, 212, 0.25) !important;
+    border-color: rgba(168, 85, 247, 0.25) !important;
 }
 
 .table .top a:link, .table .top a:active, .table .top a:visited,
@@ -214,16 +214,16 @@ a:hover, a:focus {
 }
 
 .table .left, .inner-table .left, .inner-table .right {
-    border-color: rgba(94, 234, 212, 0.15) !important;
+    border-color: rgba(168, 85, 247, 0.15) !important;
     color: var(--text) !important;
 }
 
 .table .right_odd, #player .right_odd, #player tr.right {
-    background: rgba(244, 114, 224, 0.06) !important;
+    background: rgba(217, 70, 239, 0.06) !important;
 }
 
 #player hr {
-    border-color: rgba(94, 234, 212, 0.25) !important;
+    border-color: rgba(168, 85, 247, 0.25) !important;
 }
 
 #player .text-muted {
@@ -233,14 +233,14 @@ a:hover, a:focus {
 /* ---------- badges ---------- */
 .badge {
     background: var(--pink-bright) !important;
-    color: #060c14 !important;
-    box-shadow: 0 0 6px rgba(255, 143, 240, 0.7) !important;
+    color: #0d0518 !important;
+    box-shadow: 0 0 6px rgba(240, 171, 252, 0.7) !important;
 }
 
 /* ---------- forms & inputs ---------- */
 textarea, input, select {
-    background: rgba(6, 12, 20, 0.6) !important;
-    border: 1px solid rgba(94, 234, 212, 0.4) !important;
+    background: rgba(13, 5, 24, 0.6) !important;
+    border: 1px solid rgba(168, 85, 247, 0.4) !important;
     color: var(--text) !important;
     border-radius: 6px !important;
 }
@@ -251,20 +251,20 @@ input::placeholder {
 
 /* ---------- featured lion / caves / mounds ---------- */
 .featured-lion, .mound-grid, .cave-grid {
-    border: 1px solid rgba(94, 234, 212, 0.3) !important;
+    border: 1px solid rgba(168, 85, 247, 0.3) !important;
     border-radius: 8px !important;
-    box-shadow: 0 0 14px rgba(94, 234, 212, 0.15) !important;
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.15) !important;
 }
 
 .center > a:hover > .cave-grid, .center > a:focus > .cave-grid,
 .center > a:hover > .mound-grid, .center > a:focus > .mound-grid {
-    box-shadow: 0 0 18px rgba(255, 143, 240, 0.5) !important;
+    box-shadow: 0 0 18px rgba(240, 171, 252, 0.5) !important;
 }
 
 /* ---------- dynasty pills ---------- */
 .dynastylist .left {
     background: var(--pandora-panel-light) !important;
-    border: 1px solid rgba(244, 114, 224, 0.25) !important;
+    border: 1px solid rgba(217, 70, 239, 0.25) !important;
     border-radius: 20px !important;
 }
 
@@ -273,13 +273,13 @@ input::placeholder {
 }
 
 .dynastylist h3:hover, .dynastylist h3:focus {
-    text-shadow: 0 0 8px rgba(255, 143, 240, 0.8) !important;
+    text-shadow: 0 0 8px rgba(240, 171, 252, 0.8) !important;
 }
 
 /* ---------- features ---------- */
 div.feature {
     background: var(--pandora-panel) !important;
-    border: 1px solid rgba(94, 234, 212, 0.25) !important;
+    border: 1px solid rgba(168, 85, 247, 0.25) !important;
     border-radius: 8px !important;
 }
 
@@ -298,13 +298,13 @@ div.feature h3 {
     color: #04121a !important;
     font-weight: 600;
     border-radius: 6px !important;
-    box-shadow: 0 0 10px rgba(94, 234, 212, 0.35) !important;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.35) !important;
     transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .select-control:hover, button.button:hover, input[type="button"]:hover,
 input[type="submit"]:hover, input[type="reset"]:hover {
-    box-shadow: 0 0 18px rgba(255, 143, 240, 0.6) !important;
+    box-shadow: 0 0 18px rgba(240, 171, 252, 0.6) !important;
     transform: translateY(-1px);
 }
 
@@ -316,8 +316,8 @@ input[type="submit"].bad, input[type="reset"].bad {
 
 /* ---------- footer ---------- */
 .footer {
-    background: rgba(4, 9, 15, 0.9) !important;
-    border-top: 1px solid rgba(94, 234, 212, 0.3) !important;
+    background: rgba(9, 3, 17, 0.9) !important;
+    border-top: 1px solid rgba(168, 85, 247, 0.3) !important;
     color: var(--text-dim) !important;
 }
 
@@ -340,15 +340,15 @@ input[type="submit"].bad, input[type="reset"].bad {
 /* ---------- chat ---------- */
 #chatMessageContainer, .s-chat-sidebar {
     background: var(--pandora-panel) !important;
-    border: 1px solid rgba(94, 234, 212, 0.25) !important;
+    border: 1px solid rgba(168, 85, 247, 0.25) !important;
 }
 
 .s-chat-message:nth-child(even) {
-    background: rgba(94, 234, 212, 0.04) !important;
+    background: rgba(168, 85, 247, 0.04) !important;
 }
 
 .s-chat-message:nth-child(odd) {
-    background: rgba(244, 114, 224, 0.04) !important;
+    background: rgba(217, 70, 239, 0.04) !important;
 }
 
 .s-chat-message_timestamp {
@@ -356,8 +356,8 @@ input[type="submit"].bad, input[type="reset"].bad {
 }
 
 #chatMessageList[data-pings="enabled"] .s-chat-message_mention {
-    background: rgba(255, 143, 240, 0.15) !important;
-    box-shadow: 0 0 8px rgba(255, 143, 240, 0.4) !important;
+    background: rgba(240, 171, 252, 0.15) !important;
+    box-shadow: 0 0 8px rgba(240, 171, 252, 0.4) !important;
 }
 
 #chatMessageList::-webkit-scrollbar {
@@ -370,9 +370,9 @@ input[type="submit"].bad, input[type="reset"].bad {
 }
 
 #fra_chatContainer #txtChatInput {
-    background: rgba(6, 12, 20, 0.7) !important;
+    background: rgba(13, 5, 24, 0.7) !important;
     color: var(--text) !important;
-    border: 1px solid rgba(94, 234, 212, 0.4) !important;
+    border: 1px solid rgba(168, 85, 247, 0.4) !important;
 }
 
 #fra_chatContainer .channelMenu .channelSwitcher.active {
