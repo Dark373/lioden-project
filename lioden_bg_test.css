@@ -33,18 +33,6 @@
     padding: 18px !important;
 }
 
-/* ---------- background video (element must be pasted directly into the description box) ---------- */
-.pandora-bg-video {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    object-fit: cover !important;
-    z-index: -2 !important;
-    pointer-events: none !important;
-}
-
 /* ---------- cursor ---------- */
 html, body, * {
     cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@9a874539537c322bc4b99cbc7ad4324fd3e12e92/woodsprite_cursor.png') 16 3, auto !important;
@@ -52,7 +40,7 @@ html, body, * {
 
 /* ---------- base ---------- */
 body {
-    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
+    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@f27fe42d2736e5a1cbd2c584c08b8be3af1bbf86/pandora_bg.webp') !important;
     background-size: cover, cover !important;
     background-position: center, center !important;
     background-repeat: no-repeat, no-repeat !important;
