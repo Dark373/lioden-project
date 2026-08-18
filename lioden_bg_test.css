@@ -50,14 +50,13 @@ body {
     color: var(--text) !important;
 }
 
-/* ---------- background toggle (pure CSS, no JS: checkbox + :has()) ---------- */
-/* paste "<input type='checkbox' id='pandoraBgToggle'><label for='pandoraBgToggle' class='pandora-bg-toggle-label'></label>" into the description box */
-#pandoraBgToggle {
+/* ---------- background toggle (pure CSS, no JS: checkbox nested in label + :has()) ---------- */
+/* paste "<label class='pandora-bg-toggle-label'><input type='checkbox' class='pandoraBgToggleInput'></label>" into the description box */
+.pandoraBgToggleInput {
     position: absolute !important;
     opacity: 0 !important;
     width: 0 !important;
     height: 0 !important;
-    pointer-events: none !important;
 }
 
 .pandora-bg-toggle-label {
@@ -89,11 +88,11 @@ body {
     content: "🖼️ Static BG (click for animated)";
 }
 
-#pandoraBgToggle:checked ~ .pandora-bg-toggle-label::before {
+.pandora-bg-toggle-label:has(.pandoraBgToggleInput:checked)::before {
     content: "🎬 Animated BG (click for static)";
 }
 
-body:has(#pandoraBgToggle:checked) {
+body:has(.pandoraBgToggleInput:checked) {
     background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@f27fe42d2736e5a1cbd2c584c08b8be3af1bbf86/pandora_bg.webp') !important;
 }
 
