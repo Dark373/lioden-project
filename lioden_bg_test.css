@@ -278,6 +278,8 @@ input::placeholder {
 
 /* ---------- featured lion / caves / mounds ---------- */
 .featured-lion, .mound-grid, .cave-grid {
+    background: rgba(94, 28, 120, 0.5) !important;
+    color: var(--text) !important;
     border: 1px solid rgba(168, 85, 247, 0.3) !important;
     border-radius: 8px !important;
     box-shadow: 0 0 14px rgba(168, 85, 247, 0.15) !important;
