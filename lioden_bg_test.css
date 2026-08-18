@@ -50,45 +50,43 @@ body {
     color: var(--text) !important;
 }
 
-/* ---------- background toggle (pure CSS, no JS: checkbox nested in label + :has()) ---------- */
-/* paste "<label class='pandora-bg-toggle-label'><input type='checkbox' class='pandoraBgToggleInput'></label>" into the description box */
+/* ---------- background toggle (pure CSS, no JS: single checkbox styled as the pill itself) ---------- */
+/* paste "<input type='checkbox' class='pandoraBgToggleInput'>" into the description box (nothing else needed) */
 .pandoraBgToggleInput {
-    position: absolute !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-.pandora-bg-toggle-label {
+    -webkit-appearance: none !important;
+    appearance: none !important;
     position: fixed !important;
     bottom: 16px !important;
     right: 16px !important;
     z-index: 9999 !important;
+    margin: 0 !important;
+    padding: 8px 16px !important;
+    min-width: 230px !important;
+    height: 32px !important;
     display: inline-flex !important;
     align-items: center !important;
-    padding: 8px 16px !important;
     background: rgba(50, 14, 78, 0.85) !important;
     border: 1px solid rgba(168, 85, 247, 0.5) !important;
     border-radius: 999px !important;
+    cursor: pointer !important;
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.4) !important;
+    transition: box-shadow 0.2s ease !important;
+}
+
+.pandoraBgToggleInput:hover {
+    box-shadow: 0 0 22px rgba(240, 171, 252, 0.6) !important;
+}
+
+.pandoraBgToggleInput::before {
+    content: "🖼️ Static BG (click for animated)";
     color: var(--text) !important;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    cursor: pointer !important;
-    box-shadow: 0 0 14px rgba(168, 85, 247, 0.4) !important;
-    user-select: none !important;
-    transition: box-shadow 0.2s ease !important;
+    white-space: nowrap !important;
 }
 
-.pandora-bg-toggle-label:hover {
-    box-shadow: 0 0 22px rgba(240, 171, 252, 0.6) !important;
-}
-
-.pandora-bg-toggle-label::before {
-    content: "🖼️ Static BG (click for animated)";
-}
-
-.pandora-bg-toggle-label:has(.pandoraBgToggleInput:checked)::before {
+.pandoraBgToggleInput:checked::before {
     content: "🎬 Animated BG (click for static)";
 }
 
