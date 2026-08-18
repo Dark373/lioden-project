@@ -7,8 +7,8 @@
 
 :root {
     --pandora-bg: #0d0518;
-    --pandora-panel: rgba(38, 10, 58, 0.45);
-    --pandora-panel-light: rgba(52, 14, 76, 0.35);
+    --pandora-panel: rgba(50, 14, 78, 0.52);
+    --pandora-panel-light: rgba(64, 18, 96, 0.42);
     --cyan: #a855f7;
     --cyan-bright: #d8b4fe;
     --pink: #d946ef;
@@ -19,8 +19,12 @@
 
 /* ---------- base ---------- */
 body {
-    background: var(--pandora-bg) url('https://wallpapercave.com/wp/wp5605685.jpg') no-repeat center center fixed !important;
-    background-size: cover;
+    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.4), rgba(35, 6, 60, 0.6)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
+    background-size: cover, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: fixed, fixed !important;
+    background-color: var(--pandora-bg) !important;
     font-family: 'Quicksand', sans-serif !important;
     color: var(--text) !important;
 }
