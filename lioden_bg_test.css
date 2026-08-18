@@ -26,7 +26,7 @@
 
 /* ---------- cursor ---------- */
 html, body, * {
-    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@ac6c5574da287201e088f3fd5ba953983fbfe105/woodsprite_cursor.png') 24 5, auto !important;
+    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@9a874539537c322bc4b99cbc7ad4324fd3e12e92/woodsprite_cursor.png') 16 3, auto !important;
 }
 
 /* ---------- base ---------- */
@@ -328,6 +328,19 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 input[type="submit"].bad, input[type="reset"].bad {
     background: linear-gradient(135deg, #d0397a, #7a1f4a) !important;
     color: #ffe1ef !important;
+}
+
+/* ---------- general hover-glow indicator (custom cursor removes the usual hand-cursor cue) ---------- */
+button, .btn, input[type="button"], input[type="submit"], input[type="reset"],
+.select-control, .navbar-toggle, .channelSwitcher, .badge, a.badge,
+.dynastylist .left, .featured-lion, .cave-grid, .mound-grid, .item {
+    transition: box-shadow 0.18s ease, filter 0.18s ease !important;
+}
+
+button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover,
+.select-control:hover, .navbar-toggle:hover, .channelSwitcher:hover, .badge:hover, a.badge:hover,
+.dynastylist .left:hover, .featured-lion:hover, .cave-grid:hover, .mound-grid:hover, .item:hover {
+    box-shadow: 0 0 16px rgba(240, 171, 252, 0.75), 0 0 30px rgba(168, 85, 247, 0.45) !important;
 }
 
 /* ---------- footer ---------- */
