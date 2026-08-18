@@ -24,6 +24,11 @@
     background-color: transparent !important;
 }
 
+/* ---------- cursor ---------- */
+html, body, * {
+    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@0833460b59f40e61ad20a0fa23f5e4d33631c69d/woodsprite_cursor.png') 48 8, auto !important;
+}
+
 /* ---------- base ---------- */
 body {
     background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
@@ -32,7 +37,6 @@ body {
     background-repeat: no-repeat, no-repeat !important;
     background-attachment: fixed, fixed !important;
     background-color: var(--pandora-bg) !important;
-    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@028bd9b304a12915b1e5774f3fe1fe785491e12a/woodsprite_cursor.png') 64 10, auto !important;
     font-family: 'Quicksand', sans-serif !important;
     color: var(--text) !important;
 }
