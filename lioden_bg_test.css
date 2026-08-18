@@ -32,6 +32,7 @@ body {
     background-repeat: no-repeat, no-repeat !important;
     background-attachment: fixed, fixed !important;
     background-color: var(--pandora-bg) !important;
+    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@028bd9b304a12915b1e5774f3fe1fe785491e12a/woodsprite_cursor.png') 64 10, auto !important;
     font-family: 'Quicksand', sans-serif !important;
     color: var(--text) !important;
 }
