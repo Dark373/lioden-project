@@ -1,0 +1,6 @@
+/* Lioden background test — background only, nothing else changed */
+
+body {
+    background: url('https://wallpapercave.com/wp/wp5605685.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
