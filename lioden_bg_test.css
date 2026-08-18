@@ -229,13 +229,15 @@ a:hover, a:focus {
     color: var(--pink-bright) !important;
 }
 
-.table .left, .inner-table .left, .inner-table .right {
-    border-color: rgba(168, 85, 247, 0.15) !important;
+.table .left, .table .right, .table .right.small, td.left, td.right, td.right.small,
+.inner-table .left, .inner-table .right {
+    background: rgba(94, 28, 120, 0.5) !important;
+    border-color: rgba(168, 85, 247, 0.2) !important;
     color: var(--text) !important;
 }
 
 .table .right_odd, #player .right_odd, #player tr.right {
-    background: rgba(217, 70, 239, 0.06) !important;
+    background: rgba(120, 36, 150, 0.4) !important;
 }
 
 #player hr {
