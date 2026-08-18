@@ -7,8 +7,8 @@
 
 :root {
     --pandora-bg: #0d0518;
-    --pandora-panel: rgba(50, 14, 78, 0.34);
-    --pandora-panel-light: rgba(64, 18, 96, 0.26);
+    --pandora-panel: rgba(50, 14, 78, 0.52);
+    --pandora-panel-light: rgba(64, 18, 96, 0.4);
     --cyan: #a855f7;
     --cyan-bright: #d8b4fe;
     --pink: #d946ef;
@@ -26,7 +26,7 @@
 
 /* ---------- main content card (tiered opacity, echoes the sidebar panels) ---------- */
 #pageContainer {
-    background: rgba(40, 12, 62, 0.3) !important;
+    background: rgba(40, 12, 62, 0.48) !important;
     border: 1px solid rgba(168, 85, 247, 0.22) !important;
     border-radius: 12px !important;
     box-shadow: 0 0 26px rgba(94, 28, 120, 0.2) !important;
@@ -240,7 +240,7 @@ a:hover, a:focus {
 
 .table .left, .table .right, .table .right.small, td.left, td.right, td.right.small,
 .inner-table .left, .inner-table .right {
-    background: rgba(94, 28, 120, 0.5) !important;
+    background: rgba(94, 28, 120, 0.65) !important;
     border-color: rgba(168, 85, 247, 0.2) !important;
     color: var(--text) !important;
 }
@@ -278,13 +278,13 @@ input::placeholder {
 
 /* ---------- generic left/right link bars (menu-style links, distinct from .table cells) ---------- */
 .left, .right {
-    background: rgba(94, 28, 120, 0.5) !important;
+    background: rgba(94, 28, 120, 0.65) !important;
     color: var(--text) !important;
 }
 
 /* ---------- featured lion / caves / mounds ---------- */
 .featured-lion, .mound-grid, .cave-grid {
-    background: rgba(94, 28, 120, 0.5) !important;
+    background: rgba(94, 28, 120, 0.65) !important;
     color: var(--text) !important;
     border: 1px solid rgba(168, 85, 247, 0.3) !important;
     border-radius: 8px !important;
