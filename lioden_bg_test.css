@@ -7,8 +7,8 @@
 
 :root {
     --pandora-bg: #0d0518;
-    --pandora-panel: rgba(50, 14, 78, 0.52);
-    --pandora-panel-light: rgba(64, 18, 96, 0.42);
+    --pandora-panel: rgba(50, 14, 78, 0.34);
+    --pandora-panel-light: rgba(64, 18, 96, 0.26);
     --cyan: #a855f7;
     --cyan-bright: #d8b4fe;
     --pink: #d946ef;
@@ -17,9 +17,16 @@
     --text-dim: #c9a8e0;
 }
 
+
+/* ---------- neutralize Lioden's own content wrapper backgrounds ---------- */
+#pageContainer, .col-md-9, .row, .container, .container-fluid, .main {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
 /* ---------- base ---------- */
 body {
-    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.4), rgba(35, 6, 60, 0.6)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
+    background-image: linear-gradient(160deg, rgba(130, 40, 190, 0.22), rgba(35, 6, 60, 0.38)), url('https://wallpapercave.com/wp/wp5605685.jpg') !important;
     background-size: cover, cover !important;
     background-position: center, center !important;
     background-repeat: no-repeat, no-repeat !important;
