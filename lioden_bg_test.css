@@ -44,7 +44,7 @@ body {
     background-size: cover, cover !important;
     background-position: center, center !important;
     background-repeat: no-repeat, no-repeat !important;
-    background-attachment: fixed, fixed !important;
+    background-attachment: scroll, scroll !important;
     background-color: var(--pandora-bg) !important;
     font-family: 'Quicksand', sans-serif !important;
     color: var(--text) !important;
