@@ -148,6 +148,11 @@ img[src*="icon-beetle-gold.png"] {
     content: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@8aee8168fa2c729fcd1ae086b6509e3fe138c683/claw_beetle_icon_20.png') !important;
 }
 
+/* silver beetle currency icon -> icy-silver claw mark */
+img[src*="icon-beetle-silver.png"] {
+    content: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@b22146aee85d44aa459f9c41020d64c11d8fb17f/claw_beetle_icon_silver_20.png') !important;
+}
+
 /* base */
 body {
     background-image: linear-gradient(160deg, rgba(var(--accent-a-rgb), 0.18), rgba(var(--panel-rgb), 0.42)), var(--bg-image) !important;
