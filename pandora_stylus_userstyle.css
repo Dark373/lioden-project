@@ -143,6 +143,11 @@ html, body, * {
     cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@e00f8e3ac7e9eee7ccd00063f87c78f1d0b8ebd2/woodsprite_cursor.png') 16 3, auto !important;
 }
 
+/* gold beetle currency icon -> amber claw mark */
+img[src*="icon-beetle-gold.png"] {
+    content: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@8aee8168fa2c729fcd1ae086b6509e3fe138c683/claw_beetle_icon_20.png') !important;
+}
+
 /* base */
 body {
     background-image: linear-gradient(160deg, rgba(var(--accent-a-rgb), 0.18), rgba(var(--panel-rgb), 0.42)), var(--bg-image) !important;
