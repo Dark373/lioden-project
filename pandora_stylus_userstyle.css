@@ -1,0 +1,527 @@
+/* ============================================================
+   PANDORA — full-site personal skin for Lioden (Stylus userstyle)
+   Forest (Den/default) · Water (Oasis) · Air (Crossroads/Chatter)
+   Ash (Hoard/News) · Floating Mountains (lion/pride pages)
+
+   SETUP: In Stylus, click "Write new style", set "Applies to" to
+   unrestricted (delete any auto-filled URL match), then paste this
+   whole file. The @-moz-document blocks below handle per-page scoping
+   themselves — Stylus applies them correctly in every browser, not
+   just Firefox.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
+
+/* ---------- default palette: FOREST (Den, Event, FAQ, and fallback) ---------- */
+:root {
+    --pandora-bg: #0d0518;
+    --panel-rgb: 50, 14, 78;
+    --accent-a-rgb: 168, 85, 247;
+    --accent-a: #a855f7;
+    --accent-a-bright: #d8b4fe;
+    --accent-a-bright-rgb: 216, 180, 254;
+    --accent-b-rgb: 217, 70, 239;
+    --accent-b: #d946ef;
+    --accent-b-bright: #f0abfc;
+    --accent-b-bright-rgb: 240, 171, 252;
+    --text: #f3e8ff;
+    --text-dim: #c9a8e0;
+    --bg-image: url('https://wallpapercave.com/wp/wp5605685.jpg');
+}
+
+/* ---------- WATER: Oasis ---------- */
+@-moz-document url-prefix("https://www.lioden.com/oasis.php"), url-prefix("https://lioden.com/oasis.php") {
+    :root {
+        --pandora-bg: #041a24;
+        --panel-rgb: 8, 42, 56;
+        --accent-a-rgb: 34, 211, 238;
+        --accent-a: #22d3ee;
+        --accent-a-bright: #a5f3fc;
+        --accent-a-bright-rgb: 165, 243, 252;
+        --accent-b-rgb: 14, 116, 144;
+        --accent-b: #0e7490;
+        --accent-b-bright: #5eead4;
+        --accent-b-bright-rgb: 94, 234, 212;
+        --text: #e0fbff;
+        --text-dim: #9fd4d9;
+        --bg-image: url('https://wallpapercave.com/wp/wp13975839.jpg');
+    }
+}
+
+/* ---------- AIR: Crossroads, Chatter ---------- */
+@-moz-document url-prefix("https://www.lioden.com/explore.php"), url-prefix("https://lioden.com/explore.php"),
+               url-prefix("https://www.lioden.com/boards.php"), url-prefix("https://lioden.com/boards.php") {
+    :root {
+        --pandora-bg: #0a1224;
+        --panel-rgb: 22, 32, 60;
+        --accent-a-rgb: 125, 211, 252;
+        --accent-a: #7dd3fc;
+        --accent-a-bright: #e0f2fe;
+        --accent-a-bright-rgb: 224, 242, 254;
+        --accent-b-rgb: 165, 180, 252;
+        --accent-b: #a5b4fc;
+        --accent-b-bright: #eef2ff;
+        --accent-b-bright-rgb: 238, 242, 255;
+        --text: #eef6ff;
+        --text-dim: #b7c6e0;
+        --bg-image: url('https://wallpapercave.com/wp/wp16035892.jpg');
+    }
+}
+
+/* ---------- ASH: Hoard, News ---------- */
+@-moz-document url-prefix("https://www.lioden.com/hoard.php"), url-prefix("https://lioden.com/hoard.php"),
+               url-prefix("https://www.lioden.com/news.php"), url-prefix("https://lioden.com/news.php") {
+    :root {
+        --pandora-bg: #150d0a;
+        --panel-rgb: 46, 24, 16;
+        --accent-a-rgb: 249, 115, 22;
+        --accent-a: #f97316;
+        --accent-a-bright: #fdba74;
+        --accent-a-bright-rgb: 253, 186, 116;
+        --accent-b-rgb: 239, 68, 68;
+        --accent-b: #ef4444;
+        --accent-b-bright: #fca5a5;
+        --accent-b-bright-rgb: 252, 165, 165;
+        --text: #fde8d8;
+        --text-dim: #d9ad91;
+        --bg-image: url('https://cdn.myportfolio.com/d27a528cb79d11a79da1254ac41e9cde/35ff22a4-157a-4c13-a677-1f2a48db3939_rw_3840.jpg?h=ee7a959d7d2e38e234d366ea8fb36044');
+    }
+}
+
+/* ---------- FLOATING MOUNTAINS: lion pages, pride sub-pages ---------- */
+@-moz-document url-prefix("https://www.lioden.com/lion.php"), url-prefix("https://lioden.com/lion.php"),
+               url-prefix("https://www.lioden.com/unsorted.php"), url-prefix("https://lioden.com/unsorted.php"),
+               url-prefix("https://www.lioden.com/nesting.php"), url-prefix("https://lioden.com/nesting.php"),
+               url-prefix("https://www.lioden.com/dynasty.php"), url-prefix("https://lioden.com/dynasty.php"),
+               url-prefix("https://www.lioden.com/cave.php"), url-prefix("https://lioden.com/cave.php") {
+    :root {
+        --pandora-bg: #0f1720;
+        --panel-rgb: 30, 42, 46;
+        --accent-a-rgb: 134, 239, 172;
+        --accent-a: #86efac;
+        --accent-a-bright: #d9f99d;
+        --accent-a-bright-rgb: 217, 249, 157;
+        --accent-b-rgb: 148, 163, 184;
+        --accent-b: #94a3b8;
+        --accent-b-bright: #e2e8f0;
+        --accent-b-bright-rgb: 226, 232, 240;
+        --text: #eaf6ee;
+        --text-dim: #a9c2b3;
+        --bg-image: url('https://wallpapercave.com/wp/wp10514823.jpg');
+    }
+}
+
+/* ============================================================
+   SHARED RULES — defined once, reused on every matched page.
+   Colors come entirely from the variables above.
+   ============================================================ */
+
+/* neutralize Lioden's own content wrapper backgrounds */
+.row, .container, .container-fluid, .main {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* main content card */
+#pageContainer {
+    background: rgba(var(--panel-rgb), 0.48) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.22) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 0 26px rgba(var(--panel-rgb), 0.35) !important;
+    padding: 18px !important;
+}
+
+/* cursor: same woodsprite everywhere */
+html, body, * {
+    cursor: url('https://cdn.jsdelivr.net/gh/Dark373/lioden-project@e00f8e3ac7e9eee7ccd00063f87c78f1d0b8ebd2/woodsprite_cursor.png') 16 3, auto !important;
+}
+
+/* base */
+body {
+    background-image: linear-gradient(160deg, rgba(var(--accent-a-rgb), 0.18), rgba(var(--panel-rgb), 0.42)), var(--bg-image) !important;
+    background-size: cover, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: fixed, fixed !important;
+    background-color: var(--pandora-bg) !important;
+    font-family: 'Quicksand', sans-serif !important;
+    color: var(--text) !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Philosopher', serif !important;
+    color: var(--accent-b-bright) !important;
+    text-shadow: 0 0 8px rgba(var(--accent-b-rgb), 0.6), 0 0 16px rgba(var(--accent-b-rgb), 0.25) !important;
+}
+
+.sidebar h3 {
+    color: var(--accent-a-bright) !important;
+    text-shadow: 0 0 8px rgba(var(--accent-a-rgb), 0.6) !important;
+}
+
+p, b, small {
+    color: var(--text) !important;
+}
+
+#fraProfileContent {
+    background: rgba(var(--panel-rgb), 0.52) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.35) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px rgba(var(--accent-a-rgb), 0.15), inset 0 0 30px rgba(var(--accent-b-rgb), 0.05) !important;
+    padding: 16px;
+}
+
+/* links */
+a:link, a:visited, a:active {
+    color: var(--accent-a-bright) !important;
+    text-decoration: none !important;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: var(--accent-b-bright) !important;
+    text-shadow: 0 0 8px rgba(var(--accent-b-bright-rgb), 0.8) !important;
+}
+
+/* topbar / navbar */
+.topbar, .navbar, .navbar-default {
+    background: linear-gradient(180deg, rgba(var(--panel-rgb), 0.95), rgba(var(--panel-rgb), 0.8)) !important;
+    border-bottom: 1px solid rgba(var(--accent-a-rgb), 0.4) !important;
+    box-shadow: 0 2px 12px rgba(var(--accent-a-rgb), 0.2) !important;
+}
+
+.topbar a:link, .topbar a:visited, .topbar a:active {
+    color: var(--accent-a-bright) !important;
+}
+
+.topbar a:hover, .topbar a:focus {
+    color: var(--accent-b-bright) !important;
+    text-shadow: 0 0 8px rgba(var(--accent-b-bright-rgb), 0.7) !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: var(--text-dim) !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a:focus {
+    color: var(--accent-b-bright) !important;
+    background: rgba(var(--accent-b-rgb), 0.12) !important;
+    text-shadow: 0 0 6px rgba(var(--accent-b-bright-rgb), 0.6) !important;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background: transparent !important;
+    border-color: rgba(var(--accent-a-rgb), 0.25) !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background: var(--accent-a-bright) !important;
+}
+
+.navbar .active a:link, .navbar .active a:visited, .navbar .active a:active, .navbar .active a:focus {
+    color: var(--accent-b-bright) !important;
+}
+
+/* breadcrumb */
+.breadcrumb {
+    background: rgba(var(--panel-rgb), 0.4) !important;
+    border-radius: 6px !important;
+}
+
+.breadcrumb-item.active {
+    color: var(--accent-a-bright) !important;
+}
+
+/* sidebar / panels */
+.sidebar.col-md-3, .col-md-3 .panel, .panel-body {
+    background: rgba(var(--panel-rgb), 0.52) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.3) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 16px rgba(var(--accent-a-rgb), 0.12) !important;
+}
+
+/* progress bars */
+.progress {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+}
+
+.progress-bar-success {
+    background: linear-gradient(90deg, #2fd6a0, var(--accent-a-bright)) !important;
+    box-shadow: 0 0 10px rgba(var(--accent-a-rgb), 0.6) !important;
+}
+
+.progress-bar-danger {
+    background: linear-gradient(90deg, #d0397a, #ff5fa2) !important;
+    box-shadow: 0 0 10px rgba(255, 95, 162, 0.6) !important;
+}
+
+.progress-bar-warning {
+    background: linear-gradient(90deg, #d9a441, #ffce6b) !important;
+    box-shadow: 0 0 10px rgba(255, 206, 107, 0.5) !important;
+}
+
+/* alerts */
+.alert-success, .alert-danger, .alert-warning {
+    border-radius: 8px !important;
+    border: 1px solid !important;
+    backdrop-filter: blur(2px);
+}
+
+.alert-success {
+    background: rgba(var(--accent-a-rgb), 0.1) !important;
+    border-color: rgba(var(--accent-a-rgb), 0.5) !important;
+    color: var(--accent-a-bright) !important;
+}
+
+.alert-danger {
+    background: rgba(var(--accent-b-rgb), 0.12) !important;
+    border-color: rgba(var(--accent-b-rgb), 0.5) !important;
+    color: var(--accent-b-bright) !important;
+}
+
+.alert-warning {
+    background: rgba(255, 206, 107, 0.1) !important;
+    border-color: rgba(255, 206, 107, 0.45) !important;
+    color: #ffce6b !important;
+}
+
+/* comment box */
+#commentBox {
+    background: rgba(var(--panel-rgb), 0.52) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.25) !important;
+    border-radius: 8px !important;
+}
+
+.comment:nth-child(even) {
+    background: rgba(var(--accent-b-rgb), 0.05) !important;
+}
+
+#commentBox::-webkit-scrollbar {
+    width: 8px;
+}
+
+#commentBox::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-a-bright), var(--accent-b-bright)) !important;
+    border-radius: 4px !important;
+}
+
+#commentBox::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-b-bright) !important;
+}
+
+/* tables */
+.table {
+    background: rgba(var(--panel-rgb), 0.4) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.table .top, .table th, .table .innerHeader, .table .bottom {
+    background: rgba(var(--accent-a-rgb), 0.1) !important;
+    color: var(--accent-a-bright) !important;
+    border-color: rgba(var(--accent-a-rgb), 0.25) !important;
+}
+
+.table .top a:link, .table .top a:active, .table .top a:visited,
+.table th a:link, .table th a:active, .table th a:visited {
+    color: var(--accent-a-bright) !important;
+}
+
+.table .top a:hover, .table th a:hover {
+    color: var(--accent-b-bright) !important;
+}
+
+.table .left, .table .right, .table .right.small, td.left, td.right, td.right.small,
+.inner-table .left, .inner-table .right {
+    background: rgba(var(--panel-rgb), 0.65) !important;
+    border-color: rgba(var(--accent-a-rgb), 0.2) !important;
+    color: var(--text) !important;
+}
+
+.table .right_odd, #player .right_odd, #player tr.right {
+    background: rgba(var(--panel-rgb), 0.5) !important;
+}
+
+#player hr {
+    border-color: rgba(var(--accent-a-rgb), 0.25) !important;
+}
+
+#player .text-muted {
+    color: var(--text-dim) !important;
+}
+
+/* badges */
+.badge {
+    background: var(--accent-b-bright) !important;
+    color: var(--pandora-bg) !important;
+    box-shadow: 0 0 6px rgba(var(--accent-b-bright-rgb), 0.7) !important;
+}
+
+/* forms & inputs */
+textarea, input, select {
+    background: rgba(0, 0, 0, 0.35) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.4) !important;
+    color: var(--text) !important;
+    border-radius: 6px !important;
+}
+
+input::placeholder {
+    color: var(--text-dim) !important;
+}
+
+/* generic left/right link bars */
+.left, .right {
+    background: rgba(var(--panel-rgb), 0.65) !important;
+    color: var(--text) !important;
+}
+
+/* featured lion / caves / mounds */
+.featured-lion, .mound-grid, .cave-grid {
+    background: rgba(var(--panel-rgb), 0.65) !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.3) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 14px rgba(var(--accent-a-rgb), 0.15) !important;
+}
+
+.center > a:hover > .cave-grid, .center > a:focus > .cave-grid,
+.center > a:hover > .mound-grid, .center > a:focus > .mound-grid {
+    box-shadow: 0 0 18px rgba(var(--accent-b-bright-rgb), 0.5) !important;
+}
+
+/* dynasty pills */
+.dynastylist .left {
+    background: rgba(var(--panel-rgb), 0.4) !important;
+    border: 1px solid rgba(var(--accent-b-rgb), 0.25) !important;
+    border-radius: 20px !important;
+}
+
+.dynastylist h3 {
+    color: var(--accent-b-bright) !important;
+}
+
+.dynastylist h3:hover, .dynastylist h3:focus {
+    text-shadow: 0 0 8px rgba(var(--accent-b-bright-rgb), 0.8) !important;
+}
+
+/* features */
+div.feature {
+    background: rgba(var(--panel-rgb), 0.52) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.25) !important;
+    border-radius: 8px !important;
+}
+
+div.feature h3 {
+    color: var(--accent-a-bright) !important;
+}
+
+.feature-footer, .item-footer {
+    color: var(--text-dim) !important;
+}
+
+/* buttons */
+.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background: linear-gradient(135deg, var(--accent-a), var(--accent-b)) !important;
+    border: none !important;
+    color: var(--pandora-bg) !important;
+    font-weight: 600;
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px rgba(var(--accent-a-rgb), 0.35) !important;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.select-control:hover, button.button:hover, input[type="button"]:hover,
+input[type="submit"]:hover, input[type="reset"]:hover {
+    box-shadow: 0 0 18px rgba(var(--accent-b-bright-rgb), 0.6) !important;
+    transform: translateY(-1px);
+}
+
+.select-control.bad, button.button.bad, input[type="button"].bad,
+input[type="submit"].bad, input[type="reset"].bad {
+    background: linear-gradient(135deg, #d0397a, #7a1f4a) !important;
+    color: #ffe1ef !important;
+}
+
+/* general hover-glow indicator */
+button, .btn, input[type="button"], input[type="submit"], input[type="reset"],
+.select-control, .navbar-toggle, .channelSwitcher, .badge, a.badge,
+.dynastylist .left, .featured-lion, .cave-grid, .mound-grid, .item {
+    transition: box-shadow 0.18s ease, filter 0.18s ease !important;
+}
+
+button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover,
+.select-control:hover, .navbar-toggle:hover, .channelSwitcher:hover, .badge:hover, a.badge:hover,
+.dynastylist .left:hover, .featured-lion:hover, .cave-grid:hover, .mound-grid:hover, .item:hover {
+    box-shadow: 0 0 16px rgba(var(--accent-b-bright-rgb), 0.75), 0 0 30px rgba(var(--accent-a-rgb), 0.45) !important;
+}
+
+/* footer */
+.footer {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border-top: 1px solid rgba(var(--accent-a-rgb), 0.3) !important;
+    color: var(--text-dim) !important;
+}
+
+.footer a, .footer a:link, .footer a:active, .footer a:visited {
+    color: var(--accent-a-bright) !important;
+}
+
+.footer a:hover, .footer a:focus {
+    color: var(--accent-b-bright) !important;
+}
+
+.bottomlinks li a, .bottomlinks li a:link, .bottomlinks li a:active, .bottomlinks li a:visited {
+    color: var(--text-dim) !important;
+}
+
+.bottomlinks li a:hover, .bottomlinks li a:focus {
+    color: var(--accent-b-bright) !important;
+}
+
+/* chat */
+#chatMessageContainer, .s-chat-sidebar {
+    background: rgba(var(--panel-rgb), 0.52) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.25) !important;
+}
+
+.s-chat-message:nth-child(even) {
+    background: rgba(var(--accent-a-rgb), 0.04) !important;
+}
+
+.s-chat-message:nth-child(odd) {
+    background: rgba(var(--accent-b-rgb), 0.04) !important;
+}
+
+.s-chat-message_timestamp {
+    color: var(--text-dim) !important;
+}
+
+#chatMessageList[data-pings="enabled"] .s-chat-message_mention {
+    background: rgba(var(--accent-b-bright-rgb), 0.15) !important;
+    box-shadow: 0 0 8px rgba(var(--accent-b-bright-rgb), 0.4) !important;
+}
+
+#chatMessageList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chatMessageList::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-a-bright), var(--accent-b-bright)) !important;
+    border-radius: 4px !important;
+}
+
+#fra_chatContainer #txtChatInput {
+    background: rgba(0, 0, 0, 0.35) !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(var(--accent-a-rgb), 0.4) !important;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher.active {
+    color: var(--accent-b-bright) !important;
+    border-bottom: 2px solid var(--accent-b-bright) !important;
+}
