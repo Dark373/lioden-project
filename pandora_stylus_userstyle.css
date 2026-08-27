@@ -5,14 +5,18 @@
 
    SETUP: In Stylus, click "Write new style", set "Applies to" to
    unrestricted (delete any auto-filled URL match), then paste this
-   whole file. The @-moz-document blocks below handle per-page scoping
-   themselves — Stylus applies them correctly in every browser, not
-   just Firefox.
+   whole file. Every rule below is wrapped in its own @-moz-document
+   domain("lioden.com") or url-prefix(...) block, so nothing in this
+   file will ever apply outside Lioden itself, no matter how "Applies
+   to" is set. Stylus applies @-moz-document correctly in every
+   browser, not just Firefox.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
 
 /* ---------- default palette: FOREST (Den, Event, FAQ, and fallback) ---------- */
+/* scoped to lioden.com only, so this never leaks onto other websites */
+@-moz-document domain("lioden.com"), domain("www.lioden.com") {
 :root {
     --pandora-bg: #0d0518;
     --panel-rgb: 50, 14, 78;
@@ -27,6 +31,7 @@
     --text: #f3e8ff;
     --text-dim: #c9a8e0;
     --bg-image: url('https://wallpapercave.com/wp/wp5605685.jpg');
+}
 }
 
 /* ---------- WATER: Oasis ---------- */
@@ -114,7 +119,9 @@
 /* ============================================================
    SHARED RULES — defined once, reused on every matched page.
    Colors come entirely from the variables above.
+   Scoped to lioden.com only, so this never leaks onto other websites.
    ============================================================ */
+@-moz-document domain("lioden.com"), domain("www.lioden.com") {
 
 /* neutralize Lioden's own content wrapper backgrounds */
 .row, .container, .container-fluid, .main {
@@ -524,4 +531,5 @@ button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover
 #fra_chatContainer .channelMenu .channelSwitcher.active {
     color: var(--accent-b-bright) !important;
     border-bottom: 2px solid var(--accent-b-bright) !important;
+}
 }
